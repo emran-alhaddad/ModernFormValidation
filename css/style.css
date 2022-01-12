@@ -14,6 +14,7 @@
 
 body {
     background-color: var(--curent-body);
+    transition: all ease-in-out 0.8s;
 }
 
 
@@ -176,4 +177,10 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+@media (max-width:800px) {
+    .containerForm {
+        width: 70vw;
+    }
 }

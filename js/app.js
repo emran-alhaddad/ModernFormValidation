@@ -97,7 +97,7 @@ const validatePhone = phone => {
 
 
 function validatePassword(password) {
-    if (password.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,20}$/)) {
+    if (password.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,50}$/)) {
         password.classList.add('inputSuccessLightThem');
         document.getElementById('confPassword').disabled = false;
     } else {

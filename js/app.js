@@ -133,5 +133,12 @@ const validateMSG = msg => {
 
 
 const toggleThem = () => {
-    document.getElementsByTagName('body')[0].classList.add('dark-Them');
+    var body = document.getElementsByTagName('body')[0];
+    if (body.classList.contains('Dark-Them')) {
+        body.classList.remove('Dark-Them');
+        body.classList.add('Light-Them');
+    } else {
+        body.classList.remove('Light-Them');
+        document.getElementsByTagName('body')[0].classList.add('Dark-Them');
+    }
 }

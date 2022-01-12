@@ -1,8 +1,8 @@
 :root {
     --bg-light: #6593A6;
-    --bg-dark: black;
+    --bg-dark: #524141;
     --text-light: #fff;
-    --text-dark: white;
+    --text-dark: rgb(136, 201, 153) !important;
     --body-light: white;
     --body-dark: black;
     --border-focused-false: rgb(145, 16, 16);
@@ -67,12 +67,14 @@ input[type=submit]:hover {
 /* Add a background color and some padding around the form */
 
 .containerForm {
-    border-radius: 5px;
+    border-radius: 17px;
     background-color: var(--current-bg);
     color: var(--current-text);
     padding: 20px;
     margin: 20px auto;
     width: 40vw;
+    padding-top: 60px;
+    position: relative;
 }
 
 .inputSuccessLightThem {
@@ -91,19 +93,28 @@ input[type=submit]:hover {
 */
 
 .Dark-Them {
+    --current-bg: var(--bg-dark);
+    --current-text: var(--text-dark);
+    --curent-body: var(--body-dark);
+}
+
+.Light-Them {
     --current-bg: var(--bg-light);
     --current-text: var(--text-light);
-    --curent-body: var(black);
+    --curent-body: var(--body-light);
 }
 
 
 /* The switch - the box around the slider */
 
 .switch {
-    position: relative;
+    position: absolute;
+    top: 9px;
+    right: -2px;
     display: inline-block;
     width: 60px;
     height: 34px;
+    transform: rotateZ(141deg);
 }
 
 
@@ -137,7 +148,7 @@ input[type=submit]:hover {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: rgb(94, 38, 226);
     -webkit-transition: .4s;
     transition: .4s;
 }

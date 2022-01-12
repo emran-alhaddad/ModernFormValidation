@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Validation From</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
+</head>
+
+<body onload="disapleAll();">
+    <div class="containerForm">
+        <!-- Rounded switch -->
+        <label class="switch">
+    <input type="checkbox" onchange="toggleThem()">
+    <span class="slider round"></span>
+  </label>
+        <form action="">
+
+            <label for="fullName">Name</label>
+            <input class="" type="text" onkeyup="validateName(this);" id="fullName" name="fullName" placeholder="Your name..">
+
+            <label for="age">Age</label>
+            <input class="input" type="number" onkeyup="validateAge(this);" id="age" name="age" placeholder=">18">
+
+            <label for="email">Email</label>
+            <input class="input" type="email" onkeyup="validateEmail(this);" id="email" name="email" placeholder="example@gmail.com">
+
+            <label for="Phone">Phone</label>
+            <input class="input" type="tel" onkeyup="validatePhone(this);" id="Phone" name="Phone" placeholder="777xxxxxx">
+
+            <label for="password">Password</label>
+            <input class="input" type="password" onkeyup="validatePassword(this);" id="password" name="password" placeholder="password">
+
+            <label for="confPassword">Re-Password</label>
+            <input class="input" type="password" onkeyup="validateRePassword(this);" id="confPassword" name="confPassword" placeholder="Confirm Password">
+
+            <label for="link">URL</label>
+            <input class="input" type="url" onkeyup="validateURL(this);" id="link" name="link" placeholder="https://www.example.com">
+
+            <label for="msg">Message</label>
+            <textarea class="input" onkeyup="validateMSG(this);" id="msg" name="msg" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input class="input" id="submit" type="submit" value="Submit">
+
+        </form>
+    </div>
+</body>
+
+</html>

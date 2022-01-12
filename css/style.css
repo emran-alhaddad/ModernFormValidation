@@ -1,0 +1,168 @@
+:root {
+    --bg-light: #6593A6;
+    --bg-dark: black;
+    --text-light: #fff;
+    --text-dark: white;
+    --body-light: white;
+    --body-dark: black;
+    --border-focused-false: rgb(145, 16, 16);
+    --border-focused-true: rgb(94, 255, 0);
+    --current-bg: var(--bg-light);
+    --current-text: var(--text-light);
+    --curent-body: var(--body-light);
+}
+
+body {
+    background-color: var(--curent-body);
+}
+
+
+/* Style inputs with type="text", select elements and textareas */
+
+input,
+textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical;
+    /* Allow the user to vertically resize the textarea (not horizontally) */
+    border-left: 5px solid var(--border-focused-false);
+}
+
+
+/* Style the submit button with a specific background color etc */
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    padding: 6px 25px;
+    margin-top: 4px;
+    border-radius: 5px;
+    word-spacing: 10px;
+    border-left: none;
+    cursor: pointer;
+}
+
+
+/* When moving the mouse over the submit button, add a darker green color */
+
+input[type=submit]:hover {
+    background-color: #47e7ad;
+}
+
+
+/* Add a background color and some padding around the form */
+
+.containerForm {
+    border-radius: 5px;
+    background-color: var(--current-bg);
+    color: var(--current-text);
+    padding: 20px;
+    margin: 20px auto;
+    width: 40vw;
+}
+
+.inputSuccessLightThem {
+    border-left: 5px solid;
+    border-color: var(--border-focused-true);
+}
+
+.inputFaildLightThem {
+    border-color: var(--border-focused-false);
+}
+
+
+/* 
+
+-------------------------- Dark Light Themming 
+*/
+
+.Dark-Them {
+    --current-bg: var(--bg-light);
+    --current-text: var(--text-light);
+    --curent-body: var(black);
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(10, 0, 0);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #ffffff;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #ffffff;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

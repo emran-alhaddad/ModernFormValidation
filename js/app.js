@@ -58,7 +58,7 @@ const isValidHttpUrl = string => {
 const validateURL = url => {
     if (isValidHttpUrl(url.value)) {
         url.classList.add('inputSuccessLightThem');
-        document.getElementById('subject').disabled = false;
+        document.getElementById('msg').disabled = false;
     } else {
         url.classList.remove('inputSuccessLightThem');
         disapleAllExcept(url);
